@@ -6,6 +6,7 @@ import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentPagerAdapter
+import android.support.v4.app.FragmentStatePagerAdapter
 import android.support.v4.view.ViewPager
 import android.support.v7.app.ActionBar
 import android.support.v7.app.AppCompatActivity
@@ -85,7 +86,7 @@ class MoviePagerFragment: Fragment(), AdapterView.OnItemSelectedListener {
 
     private fun setUpPager() {
 
-            val adapter = object: FragmentPagerAdapter(fragmentManager) {
+            val adapter = object: FragmentStatePagerAdapter(fragmentManager) {
 
                 private var lastPosition = -1
                 private var right: Boolean = false
